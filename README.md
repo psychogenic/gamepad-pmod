@@ -63,3 +63,22 @@ Each bit will be sent in turn, for each controller, in the following order:
 
 With a HIGH value indicating the relevant button is pressed.
 
+## Building
+
+To build, you'll need the awesome [ch32v003fun](https://github.com/cnlohr/ch32v003fun) SDK, by [cnlohr](https://github.com/cnlohr), which is already included here as a submodule.  To ensure you have that, you can do
+
+```
+git submodule update --init --recursive
+```
+
+from the top level directory.
+
+Then simply (optionally) hook-up a supported programmed to the target module and
+
+```
+cd src
+make
+```
+
+That should be it.
+

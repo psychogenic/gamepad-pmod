@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+src/*.bin
+src/*.elf
+src/*.hex
+src/*.lst
+src/*.map
