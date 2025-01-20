@@ -44,12 +44,6 @@ void ReportPort::begin() {
 
 void ReportPort::send(uint32_t out_data, uint8_t num_bits) {
 
-	funDigitalWrite(latch, FUN_HIGH);
-	Delay_Us(REPORTER_LATCH_PULSE_WIDTH_US);
-	funDigitalWrite(latch, FUN_LOW);
-#if REPORTER_LATCH_PULSE_POSTDELAY_US
-	Delay_Us(REPORTER_LATCH_PULSE_POSTDELAY_US);
-#endif
 
 	for (uint8_t i=0; i<num_bits; i++) {
 		if (out_data & (1<<i)) {
@@ -64,8 +58,18 @@ void ReportPort::send(uint32_t out_data, uint8_t num_bits) {
 		REPORT_DELAY_HALFCLOCK();
 	}
 
+
+	funDigitalWrite(latch, FUN_HIGH);
+	Delay_Us(REPORTER_LATCH_PULSE_WIDTH_US);
+	funDigitalWrite(latch, FUN_LOW);
+#if REPORTER_LATCH_PULSE_POSTDELAY_US
+	Delay_Us(REPORTER_LATCH_PULSE_POSTDELAY_US);
+#endif
+
 	// idle low
 	funDigitalWrite(data, FUN_LOW);
+
+
 
 
 

@@ -10,7 +10,9 @@ Released as free and open source software under the terms of the GPL (see [LICEN
 
 This simple module allows 1 or 2 SNES controllers to report their state over 3 pins.
 
-It is pretty much a direct translation of the SNES controller protocol, other than in the fact that it automatically polls the controllers and reports back values.  This allows for using the controllers as read-only devices (i.e. using only input pins on your side) and will send all values in a single transaction (e.g. 24 bits of data in one burst for two controllers).
+It is pretty much a direct translation of the SNES controller protocol, other than in the fact that it automatically polls the controllers and reports back values and that the latch happens at the end so it acts like a SIPO (serial in, parallel out) shift register and you can just save the values whenever you see the pulse.  
+
+This allows for using the controllers as read-only devices (i.e. using only input pins on your side) and will send all values in a single transaction (e.g. 24 bits of data in one burst for two controllers).
 
 It may be easily configured (by editing the [config definitions file](src/ch32snes_config.h)) to specify:
 
@@ -32,8 +34,8 @@ Reports are sent in the following manner, by default over 3 pins:
   * clock; and
   
   * data
-  
-The latch pin will pulse when a new batch of bits is on the way.  From there, data will be asserted on the data line as the clock goes high and remain valid past when the clock goes low (at which time it should be sampled).
+
+Data will be asserted on the data line as the clock goes high and remain valid past when the clock goes low (at which time it should be sampled).  After all bits are sent, latch pulses high.
 
 Each bit will be sent in turn, for each controller, in the following order:
 
