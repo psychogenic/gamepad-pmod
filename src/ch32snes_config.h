@@ -33,9 +33,9 @@
 /*
  * Map PIN_REPORT_* using the PIN_PMOD_IO[1-8] of your choice
  */
-#define PIN_REPORT_LATCH			PIN_PMOD_IO6
-#define PIN_REPORT_CLOCK			PIN_PMOD_IO7
-#define PIN_REPORT_DATA				PIN_PMOD_IO8
+#define PIN_REPORT_LATCH			PIN_PMOD_IO4
+#define PIN_REPORT_CLOCK			PIN_PMOD_IO5
+#define PIN_REPORT_DATA				PIN_PMOD_IO6
 
 
 /* REPORT_ONLY_ON_CHANGE: send reports only
@@ -66,9 +66,9 @@
  *  - the period of the clocked data
  * all in microseconds.
  */
-#define REPORTER_LATCH_PULSE_WIDTH_US			2
+#define REPORTER_LATCH_PULSE_WIDTH_US			10
 #define REPORTER_LATCH_PULSE_POSTDELAY_US		0
-#define REPORTER_CLOCK_PERIOD_US				2
+#define REPORTER_CLOCK_PERIOD_US				8
 
 
 
