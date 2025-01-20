@@ -1,0 +1,35 @@
+# Makefile for the CH32SNES PMOD
+# setup for C++ and assumes the ch32v003fun SDK is present in 
+# parent directory
+
+all : flash
+
+TARGET:=ch32snes
+TARGET_EXT:=cpp
+
+ADDITIONAL_C_FILES+=controller.cpp \
+                    controllerset.cpp \
+		    		reportport.cpp \
+		    		PMODport.cpp
+
+include ../ch32v003fun/ch32v003fun/ch32v003fun.mk
+
+# Removing compiler optimization to small file size
+# because it optimizes the virtual functions out
+# which are tested here.
+CFLAGS:= \
+	-g -flto -ffunction-sections \
+	-static-libgcc \
+	-march=rv32ec \
+	-mabi=ilp32e \
+	-I../ch32v003fun/extralibs \
+	-I$(NEWLIB) \
+	-I$(CH32V003FUN) \
+	-nostdlib \
+	-DCH32V003 \
+	-I. -Wall
+
+CFLAGS+=-fno-rtti -DCPLUSPLUS
+
+flash : cv_flash
+clean : cv_clean
