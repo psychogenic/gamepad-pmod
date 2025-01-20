@@ -8,7 +8,10 @@ Released as free and open source software under the terms of the GPL (see [LICEN
 
 ## Overview 
 
-This simple module allows 1 or 2 SNES controllers to report their state over 3 pins.
+This simple module allows 1 or 2 SNES controllers to report their state over 3 pins, and is used with my SNES PMOD.  Here's the first prototype:
+
+
+![snes pmod](images/snespmod.jpg)
 
 It is pretty much a direct translation of the SNES controller protocol, other than in the fact that it automatically polls the controllers and reports back values and that the latch happens at the end so it acts like a SIPO (serial in, parallel out) shift register and you can just save the values whenever you see the pulse.  
 
@@ -34,6 +37,10 @@ Reports are sent in the following manner, by default over 3 pins:
   * clock; and
   
   * data
+  
+
+
+![report waveform](images/waveform.png)
 
 Data will be asserted on the data line as the clock goes high and remain valid past when the clock goes low (at which time it should be sampled).  After all bits are sent, latch pulses high.
 
