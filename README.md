@@ -65,7 +65,9 @@ With a HIGH value indicating the relevant button is pressed.
 
 ## Building
 
-To build, you'll need the awesome [ch32v003fun](https://github.com/cnlohr/ch32v003fun) SDK, by [cnlohr](https://github.com/cnlohr), which is already included here as a submodule.  To ensure you have that, you can do
+A selection of pre-compiled firmware is available in [firmware](./firmware), but you may want to build yourself...
+
+To do so, you'll need the awesome [ch32v003fun](https://github.com/cnlohr/ch32v003fun) SDK, by [cnlohr](https://github.com/cnlohr), which is already included here as a submodule.  To ensure you have that, you can do
 
 ```
 git submodule update --init --recursive
