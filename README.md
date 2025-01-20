@@ -39,8 +39,11 @@ Reports are sent in the following manner, by default over 3 pins:
   * data
   
 
+Sample waveform, holding 3 buttons:
 
 ![report waveform](images/waveform.png)
+
+In the image above, the second controller is unconnected, and the data appears all high--this allows for detection, as it isn't possible to do certain combos (e.g. up and down at the same time).
 
 Data will be asserted on the data line as the clock goes high and remain valid past when the clock goes low (at which time it should be sampled).  After all bits are sent, latch pulses high.
 
