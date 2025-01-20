@@ -10,3 +10,8 @@ where:
   
   * ABC is the PMOD IO for latch (A), clock (B), data (C)
 
+To flash:
+
+```
+ch32v003fun/minichlink/minichlink -w whatever.bin flash -b
+```
