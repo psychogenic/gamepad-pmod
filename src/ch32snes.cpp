@@ -33,6 +33,8 @@ void testPMOD();
 
 #define MAX_SKIPPED_REPORTS ((int)(MINIMUM_REPORT_INTERVAL_SECONDS * (1000/CONTROLLER_POLLING_INTERVAL_MS)))
 
+#define LED_OFF() funDigitalWrite(PIN_LED, FUN_LOW);
+#define LED_ON()  funDigitalWrite(PIN_LED, FUN_HIGH);
 int main() {
 	SystemInit();
 
@@ -40,6 +42,10 @@ int main() {
 	GPIO_port_enable(GPIO_port_D);
 
 	DEBUG_OUT("CH32SNES boot...");
+
+	funPinMode(PIN_LED, CONTROLLER_PIN_DEFAULTSETTINGS_OUTPUT);
+	LED_ON();
+
 
 #ifdef TEST_PMOD
 	DEBUG_OUT("PMOD test running...\n");
@@ -59,14 +65,37 @@ int main() {
 			PIN_REPORT_DATA);
 
 
+
 	controllers.begin();
 	reporter.begin();
+
+	for (uint8_t i=0; i<4; i++) {
+		LED_ON();
+		Delay_Ms(50);
+		LED_OFF();
+		Delay_Ms(50);
+	}
+
+	#if PIN_INCHANGE_LED_ENABLE
+		uint32_t ledOnUntil = 0;
+	#endif
+
 	DEBUG_OUT("started\n");
 
 	uint16_t numSkipped = 0;
+	uint16_t tickCount = 0;
 	while (true) {
-		if (controllers.poll() || !(REPORT_ONLY_ON_CHANGE)) {
+		tickCount++;
+		bool haveInData = controllers.poll();
+		if (haveInData || !(REPORT_ONLY_ON_CHANGE)) {
 			const SNES::ControllerSet::StateBits & curstate = controllers.state();
+
+			#if PIN_INCHANGE_LED_ENABLE
+				if (haveInData) {
+					ledOnUntil = tickCount + (PIN_INCHANGE_LED_MS/CONTROLLER_POLLING_INTERVAL_MS) + 1;
+				}
+			#endif /* PIN_INCHANGE_LED_ENABLE */
+
 			reporter.send(curstate.state, curstate.num);
 			numSkipped = 0;
 		} else {
@@ -79,6 +108,16 @@ int main() {
 				numSkipped = 0;
 			}
 		}
+		#if PIN_INCHANGE_LED_ENABLE
+		if (ledOnUntil) {
+			if (tickCount >= ledOnUntil) {
+				ledOnUntil = 0;
+				funDigitalWrite(PIN_LED, FUN_LOW);
+			} else {
+				funDigitalWrite(PIN_LED, FUN_HIGH);
+			}
+		}
+		#endif /* PIN_INCHANGE_LED_ENABLE */
 		Delay_Ms(CONTROLLER_POLLING_INTERVAL_MS);
 	}
 }

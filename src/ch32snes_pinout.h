@@ -34,6 +34,11 @@
 #define PIN_PMOD_IO8				GPIOv_from_PORT_PIN(GPIO_port_D, 3)
 
 
+#define PIN_UART_TX					GPIOv_from_PORT_PIN(GPIO_port_D, 5)
+#define PIN_UART_RX					GPIOv_from_PORT_PIN(GPIO_port_D, 6)
+#define PIN_LED						PIN_UART_TX
+
+
 #define PIN_CONTROLLERS_LATCH		GPIOv_from_PORT_PIN(GPIO_port_C, 3)
 #define PIN_CONTROLLERS_CLOCK		GPIOv_from_PORT_PIN(GPIO_port_C, 2)
 #define PIN_CONTROLLERS_DATA1		GPIOv_from_PORT_PIN(GPIO_port_C, 0)

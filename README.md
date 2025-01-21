@@ -75,6 +75,27 @@ Each bit will be sent in turn, for each controller, in the following order:
 
 With a HIGH value indicating the relevant button is pressed.
 
+
+## Default TT Configuration
+
+The default setup we'll use for [Tiny Tapeout](https://tinytapeout.com) is:
+
+  *  100kHz clock rate, so that even slowish projects can leverage the input;
+  
+  *  Latch on PMOD IO4 (*ui_in[3]* on the demoboards);
+  
+  *  Clock on PMOD IO5 (*ui_in[4]*);
+  
+  *  Data on PMOD IO6 (*ui_in[5]*);
+  
+  *  2 controllers, i.e. 24 bits of data before the latch pulses; and
+  
+  *  report-on-change but with a maximum interval between bursts of 1 second (minimum interval is about 16ms, or a 60Hz rate for reports, like the SNES console)
+  
+  
+  
+
+
 ## Building
 
 A selection of pre-compiled firmware is available in [firmware](./firmware), but you may want to build yourself...

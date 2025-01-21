@@ -38,6 +38,8 @@
 #define PIN_REPORT_DATA				PIN_PMOD_IO6
 
 
+
+
 /* REPORT_ONLY_ON_CHANGE: send reports only
  * if value has changed (1) or always (0)
  */
@@ -48,7 +50,7 @@
  * If REPORT_ONLY_ON_CHANGE, a MINIMUM_REPORT_INTERVAL_SECONDS will
  * still shoot out a report this often.  May be fractional.
  */
-#define MINIMUM_REPORT_INTERVAL_SECONDS		2
+#define MINIMUM_REPORT_INTERVAL_SECONDS		1
 
 /*
  * CONTROLLERSET_NUM_CONTROLLERS: number of controllers to report for.
@@ -71,6 +73,14 @@
 #define REPORTER_CLOCK_PERIOD_US				8
 
 
+
+/*
+ * PIN_INCHANGE_LED*
+ * Enable LED blink on input change, and set
+ * the time it's on (approx)
+ */
+#define PIN_INCHANGE_LED_ENABLE		1
+#define PIN_INCHANGE_LED_MS			50
 
 
 /*
