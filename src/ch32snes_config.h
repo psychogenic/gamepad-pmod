@@ -31,11 +31,13 @@
 #include "ch32snes_pinout.h"
 
 /*
- * Map PIN_REPORT_* using the PIN_PMOD_IO[1-8] of your choice
+ * Map PIN_REPORT_* using the PIN_PMOD_IO[1-8] of your choice.
+ * The official TinyTapeout PMOD will be using ui_in[6:4],
+ * so PMOD IO 5, 6 and 7--the default here.
  */
-#define PIN_REPORT_LATCH			PIN_PMOD_IO4
-#define PIN_REPORT_CLOCK			PIN_PMOD_IO5
-#define PIN_REPORT_DATA				PIN_PMOD_IO6
+#define PIN_REPORT_LATCH			PIN_PMOD_IO5
+#define PIN_REPORT_CLOCK			PIN_PMOD_IO6
+#define PIN_REPORT_DATA				PIN_PMOD_IO7
 
 
 
@@ -99,7 +101,7 @@
  * by consoles.
  * Note the _MS (millis) and _US (micros) suffixen.
  */
-#define CONTROLLER_POLLING_INTERVAL_MS			16
+#define CONTROLLER_POLLING_INTERVAL_HZ			600
 #define CONTROLLER_LATCH_PULSE_WIDTH_US			12
 #define CONTROLLER_LATCH_PULSE_POSTDELAY_US		6
 #define CONTROLLER_CLOCK_PERIOD_US				12
