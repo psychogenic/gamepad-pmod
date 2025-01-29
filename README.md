@@ -82,18 +82,53 @@ The default setup we'll use for [Tiny Tapeout](https://tinytapeout.com) is:
 
   *  100kHz clock rate, so that even slowish projects can leverage the input;
   
-  *  Latch on PMOD IO4 (*ui_in[3]* on the demoboards);
+  *  Latch on PMOD IO5 (*ui_in[4]* on the demoboards, PMODs _aren't_ 0-indexed);
   
-  *  Clock on PMOD IO5 (*ui_in[4]*);
+  *  Clock on PMOD IO6 (*ui_in[5]*);
   
-  *  Data on PMOD IO6 (*ui_in[5]*);
+  *  Data on PMOD IO7 (*ui_in[6]*);
   
   *  2 controllers, i.e. 24 bits of data before the latch pulses; and
   
-  *  report-on-change but with a maximum interval between bursts of 1 second (minimum interval is about 16ms, or a 60Hz rate for reports, like the SNES console)
-  
-  
-  
+  *  report-on-change but with a maximum interval between bursts of 1 second (minimum interval is about 1.66ms, or a 600Hz rate for reports, like the SNES console)
+
+### Note on latency and clock domains
+
+Though the SNES consoles only polled at 60Hz, nicely sync'ed to the framerate, if you're a speedrunner you could hit some issues if we do the same, as the PMOD isn't synchronized with the system clock.
+
+After discussion with the community and tests with both el-cheapo chinese controllers and an old famicom thing from the 90s, I'm 10x-ing the controller polling rate to 600Hz.  This doesn't actually impact the rate at which the controllers are clocked, it's just that it happens more often and doesn't seem to cause issue.
+
+From the actual SNES controller perspective, the interaction looks like this:
+
+![snes controller polling](images/queryingcontrollers.png)
+
+
+You can see that, on that side, the latch signal comes before the burst of clocking and it's being polled at just around 600Hz.
+
+Since the clocks in projects are independent from the moment at which reports can arrive, its best to do some cleaning for clock domain crossing to ensure stability.
+
+
+Best and easiest thing is just to use the [gaming_pmod sample module](https://github.com/psychogenic/vga-playground/blob/gaming-pmod/src/examples/gaming/gaming_pmod.v#L109), which handles this.
+
+If you're looking to roll your own, in verilog this would look like classic synchronizer patterns, e.g.
+
+```
+reg [1:0] pmod_data_sync;
+always @(posedge clk) begin
+  if (~rst_n) begin
+    pmod_data_sync  <= 2'b0;
+  end else begin
+    pmod_data_sync  <= {pmod_data_sync[0], pmod_data};
+  end
+end
+```
+
+Whereas with Amaranth, it's little more than using the [FFSynchronizer](https://amaranth-lang.org/docs/amaranth/v0.3/stdlib/cdc.html)
+
+```
+FFSynchronizer(i=pmod_data, o=pmod_data_sync)
+```
+
 
 
 ## Building
