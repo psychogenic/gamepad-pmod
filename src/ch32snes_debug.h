@@ -1,7 +1,7 @@
 /*
- * ch32snes_debug.h, part of the CH32SNES project
+ * ch32gamepad_debug.h, part of the CH32SNES project
  * Simple DEBUG_OUT* macros.  Their behaviour depends on the
- * CH32SNES_DEBUG_LEVEL set in ch32snes_config.h
+ * CH32SNES_DEBUG_LEVEL set in ch32gamepad_config.h
  *
  *  Created on: Jan 19, 2025
  *      Author: Pat Deegan
@@ -24,7 +24,7 @@
 #ifndef CH32SNES_DEBUG_H_
 #define CH32SNES_DEBUG_H_
 
-#include "ch32snes_config.h"
+#include "ch32gamepad_config.h"
 
 
 #define CH32SNES_DEBUG_LEVEL_VERBOSE() (CH32SNES_DEBUG_LEVEL > 1)

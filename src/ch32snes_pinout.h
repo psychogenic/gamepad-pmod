@@ -1,5 +1,5 @@
 /*
- * ch32snes_pinout.h, part of the CH32SNES project
+ * ch32gamepad_pinout.h, part of the CH32SNES project
  * Schematic-specific pinout.
  *
  *  Created on: Jan 20, 2025

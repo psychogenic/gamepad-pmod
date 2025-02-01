@@ -1,5 +1,5 @@
 /*
- * ch32snes.cpp
+ * ch32gamepad.cpp
  * Main driver for the module.
  *
  *  Created on: Jan 19, 2025
@@ -20,7 +20,7 @@
  *    along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-#include "ch32snes_includes.h"
+#include "ch32gamepad_includes.h"
 #include "controllerset.h"
 #include "reportport.h"
 #include "PMODport.h"

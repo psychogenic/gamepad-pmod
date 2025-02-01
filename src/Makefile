@@ -4,7 +4,7 @@
 
 all : flash
 
-TARGET:=ch32snes
+TARGET:=ch32gamepad
 TARGET_EXT:=cpp
 
 ADDITIONAL_C_FILES+=controller.cpp \

@@ -1,5 +1,5 @@
 /*
- * ch32snes_types.h
+ * ch32gamepad_types.h
  *
  *  Created on: Jan 19, 2025
  *      Author: Pat Deegan
@@ -22,7 +22,7 @@
 #ifndef CH32SNES_TYPES_H_
 #define CH32SNES_TYPES_H_
 
-#include "ch32snes_includes.h"
+#include "ch32gamepad_includes.h"
 
 typedef uint8_t Pin;
 

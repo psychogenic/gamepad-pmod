@@ -1,5 +1,5 @@
 /*
- * ch32snes_includes.h
+ * ch32gamepad_includes.h
  * Single place to include the useful things used everywhere.
  *
  *  Created on: Jan 19, 2025
@@ -31,8 +31,8 @@
 #include <stdint.h>
 
 
-#include "ch32snes_config.h"
-#include "ch32snes_debug.h"
+#include "ch32gamepad_config.h"
+#include "ch32gamepad_debug.h"
 
 
 

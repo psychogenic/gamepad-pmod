@@ -1,5 +1,5 @@
 /*
- * ch32snes_config.h
+ * ch32gamepad_config.h
  * Configuration for SNES controller PMOD.
  *
  * Edit this file to set which pins are used for reporting data on the PMOD,
@@ -28,7 +28,7 @@
 
 
 // makes PIN_PMOD_IO* and PIN_CONTROLLERS_* available, mapped to schem
-#include "ch32snes_pinout.h"
+#include "ch32gamepad_pinout.h"
 
 /*
  * Map PIN_REPORT_* using the PIN_PMOD_IO[1-8] of your choice.

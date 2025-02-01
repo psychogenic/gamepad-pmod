@@ -23,7 +23,7 @@
 #ifndef CONTROLLER_H_
 #define CONTROLLER_H_
 
-#include "ch32snes_types.h"
+#include "ch32gamepad_types.h"
 
 namespace SNES {
 

@@ -24,7 +24,7 @@
 #ifndef CONTROLLERSET_H_
 #define CONTROLLERSET_H_
 
-#include "ch32snes_types.h"
+#include "ch32gamepad_types.h"
 #include "controller.h"
 
 namespace SNES {

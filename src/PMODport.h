@@ -24,7 +24,7 @@
 #ifndef PMODPORT_H_
 #define PMODPORT_H_
 
-#include "ch32snes_types.h"
+#include "ch32gamepad_types.h"
 
 #define PMOD_NUM_PINS_IN_PORT		8
 namespace PMOD {
