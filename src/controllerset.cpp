@@ -97,11 +97,24 @@ const ControllerSet::StateBits & ControllerSet::state() {
 	}
 
 	rep.state = 0;
-
+	uint8_t numpresent = 0;
+	bool present[CONTROLLERSET_NUM_CONTROLLERS];
 	for (uint8_t ctrl=0; ctrl<CONTROLLERSET_NUM_CONTROLLERS; ctrl++) {
 		rep.state |=  ( (controllers[ctrl].status().rawbits & controller_status_mask) << (ctrl*CONTROLLER_STATUS_NUM_BITS_TO_REPORT));
-
+		present[ctrl] = controllers[ctrl].is_present();
+		if (present[ctrl]) {
+			numpresent++;
+		}
 	}
+#ifdef REPORTER_SHIFT_SINGLE_CTRL_PRESENT_TO_LAST_BITS
+#if CONTROLLERSET_NUM_CONTROLLERS > 1
+	rep.num = CONTROLLER_STATUS_NUM_BITS_TO_REPORT * (numpresent ? numpresent : 1);
+	if (present[1] && ! present[0]) {
+		// need to shift these down
+		rep.state = controllers[1].status().rawbits;
+	}
+#endif
+#endif
 
 	return rep;
 }

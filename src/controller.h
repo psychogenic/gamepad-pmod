@@ -60,6 +60,7 @@ public:
 	bool inData();
 
 	const Status & status() { return current_status;}
+	bool is_present() { return (current_status.rawbits & 0xfff) != 0xfff;}
 	/* setStatus returns TRUE if there was an actual change */
 	bool setStatus(const Status & stat);
 
