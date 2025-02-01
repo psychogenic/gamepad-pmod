@@ -17,7 +17,7 @@ It is pretty much a direct translation of the SNES controller protocol, other th
 
 This allows for using the controllers as read-only devices (i.e. using only input pins on your side) and will send all values in a single transaction (e.g. 24 bits of data in one burst for two controllers).
 
-It may be easily configured (by editing the [config definitions file](src/ch32snes_config.h)) to specify:
+It may be easily configured (by editing the [config definitions file](src/ch32gamepad_config.h)) to specify:
 
   * whether to report continuously, only on change and/or with a maximum interval between reports (e.g. only on change but at least every 2 seconds, as is the default configuration);
   
