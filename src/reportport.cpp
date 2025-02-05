@@ -52,6 +52,9 @@ void ReportPort::send(uint32_t out_data, uint8_t num_bits) {
 		} else {
 			funDigitalWrite(data, FUN_LOW);
 		}
+#if REPORTER_DATA_SETUP_DELAY_US > 0
+		Delay_Us(REPORTER_DATA_SETUP_DELAY_US);
+#endif
 		funDigitalWrite(clock, FUN_HIGH);
 		REPORT_DELAY_HALFCLOCK();
 		funDigitalWrite(clock, FUN_LOW);

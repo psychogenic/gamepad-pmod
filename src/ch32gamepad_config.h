@@ -68,11 +68,14 @@
  *  - width of the "latch" (this is a new data block) pulse
  *  - time delay after pulse to clock out data (may be 0)
  *  - the period of the clocked data
+ *  - an optional delay after data assertion to allow for
+ *    setup time prior to clocking.
  * all in microseconds.
  */
 #define REPORTER_LATCH_PULSE_WIDTH_US			10
 #define REPORTER_LATCH_PULSE_POSTDELAY_US		0
 #define REPORTER_CLOCK_PERIOD_US				8
+#define REPORTER_DATA_SETUP_DELAY_US			2
 
 #define REPORTER_SHIFT_SINGLE_CTRL_PRESENT_TO_LAST_BITS
 

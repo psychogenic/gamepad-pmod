@@ -108,10 +108,13 @@ const ControllerSet::StateBits & ControllerSet::state() {
 	}
 #ifdef REPORTER_SHIFT_SINGLE_CTRL_PRESENT_TO_LAST_BITS
 #if CONTROLLERSET_NUM_CONTROLLERS > 1
-	rep.num = CONTROLLER_STATUS_NUM_BITS_TO_REPORT * (numpresent ? numpresent : 1);
-	if (present[1] && ! present[0]) {
-		// need to shift these down
-		rep.state = controllers[1].status().rawbits;
+	// Always send all bits, but move things around if necessary
+	// rep.num = CONTROLLER_STATUS_NUM_BITS_TO_REPORT * (numpresent ? numpresent : 1);
+	if (present[0] && ! present[1]) {
+		// shift the bits around so controller 0 is sent last
+		// in order to accomodate systems that only expect a
+		// single controller and have only 12 flops to store data
+		rep.state = (controllers[0].status().rawbits << (CONTROLLER_STATUS_NUM_BITS_TO_REPORT)) | controller_status_mask;
 	}
 #endif
 #endif
