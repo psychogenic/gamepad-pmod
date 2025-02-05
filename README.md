@@ -13,7 +13,7 @@ This simple module allows 1 or 2 SNES controllers to report their state over 3 p
 
 ![snes pmod](images/snespmod.jpg)
 
-It is pretty much a direct translation of the SNES controller protocol, other than in the fact that it automatically polls the controllers and reports back values and that the latch happens at the end so it acts like a SIPO (serial in, parallel out) shift register and you can just save the values whenever you see the pulse.  
+It is a variation on the SNES controller protocol that automatically polls the controllers and reports back values.  The main differences are that the data may be sampled on the rising edge of the clock and the latch happens at the end so it acts like a SIPO (serial in, parallel out) shift register and you can just save the values whenever you see the pulse.  
 
 This allows for using the controllers as read-only devices (i.e. using only input pins on your side) and will send all values in a single transaction (e.g. 24 bits of data in one burst for two controllers).
 
@@ -27,6 +27,20 @@ It may be easily configured (by editing the [config definitions file](src/ch32ga
   
   * the bitrate at which these reports are sent;
 
+## Using the gamepad in projects
+
+A [verilog module](verilog/) is provided that makes inclusion in projects simple.  Include the [gamepad_pmod.v](verilog/gamepad_pmod.v) source file in your build and, somewhere in your project, instantiate one of 
+
+	* gamepad_pmod_dual -- to support two controllers, or
+	
+	* gamepad_pmod_single -- to only support a single controller
+
+You then feed the gamepad module the input data, clock and latch from the outside world and from there you receive information about which buttons are pressed at any time.  
+
+More information and basic samples are in the [verilog directory](verilog/).
+
+A nice example of an implementation using this module is Uri's [2048 game](https://github.com/urish/tt10-2048-game).
+
 
 ## Protocol
 
@@ -39,13 +53,13 @@ Reports are sent in the following manner, by default over 3 pins:
   * data
   
 
-Sample waveform, holding 3 buttons:
+Sample waveform, one controller disconnected, the other holding 3 buttons:
 
 ![report waveform](images/waveform.png)
 
-In the image above, the second controller is unconnected, and the data appears all high--this allows for detection, as it isn't possible to do certain combos (e.g. up and down at the same time).
+A disconnected controller reports all 1s, which includes impossible combinations (e.g. up and down at the same time), and lets us detect controller presence.
 
-Data will be asserted on the data line as the clock goes high and remain valid past when the clock goes low (at which time it should be sampled).  After all bits are sent, latch pulses high.
+Data will be asserted on the data line prior to the clock going high and remain valid past when the clock goes low.  After all bits are sent, latch pulses high.
 
 Each bit will be sent in turn, for each controller, in the following order:
 
