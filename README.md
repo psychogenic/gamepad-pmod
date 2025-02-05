@@ -42,6 +42,21 @@ More information and basic samples are in the [verilog directory](verilog/).
 A nice example of an implementation using this module is Uri's [2048 game](https://github.com/urish/tt10-2048-game).
 
 
+## Hardware
+
+This code all runs on a simple PMOD that little more than a CH32V003 and headers to connect to the controllers and PMOD.
+
+![schematic](images/gamepad_pmod_schem.png)
+
+It also includes:
+
+  * a PMOD host header, so you could in theory leverage the 5 unused input pins using another PMOD
+  
+  * an extra 2x3 100 mil header that allows you to jumper the PMOD IO4 into the SWDIO pin, to allow for programming through the PMOD header.
+  
+The complete project is available under [hardware/GamepadPMOD](hardware/GamepadPMOD).
+
+
 ## Protocol
 
 Reports are sent in the following manner, by default over 3 pins:
