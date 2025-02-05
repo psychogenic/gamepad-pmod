@@ -1,5 +1,5 @@
-# snespmod
-CH32V003-based 2xSNES controller interface PMOD
+# Gamepad PMOD
+CH32V003-based 2xSNES-compatible controller interface PMOD
 
 Copyright (C) 2025 Pat Deegan, [psychogenic.com](https://psychogenic.com)
 
