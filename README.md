@@ -44,9 +44,11 @@ A nice example of an implementation using this module is Uri's [2048 game](https
 
 ## Hardware
 
-This code all runs on a simple PMOD that little more than a CH32V003 and headers to connect to the controllers and PMOD.
+This code all runs on a simple PMOD that's little more than a CH32V003 and headers to connect to the controllers and PMOD.
 
 ![schematic](images/gamepad_pmod_schem.png)
+
+The CH32V polls the controllers as per the standard method for these controllers and, on change or timeout, shoots data out through the peripheral PMOD header, as described in "protocol" below.
 
 It also includes:
 
