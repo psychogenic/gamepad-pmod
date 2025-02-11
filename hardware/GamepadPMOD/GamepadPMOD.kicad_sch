@@ -12330,7 +12330,7 @@
 		)
 		(uuid "1b7c083f-5632-4dd4-9154-ac24cb78852c")
 	)
-	(text "Gamepad PMOD"
+	(text "Gamepad Pmod"
 		(exclude_from_sim no)
 		(at 126.238 16.256 0)
 		(effects
@@ -12375,7 +12375,7 @@
 		)
 		(uuid "6aef372c-54b2-4e36-b5c6-ce02964022b7")
 	)
-	(text "Simple PMOD that polls SNES-type controllers and reports back over 3 wires,\nallowing for uni-directional \"read-only\" collection of user input"
+	(text "Simple Pmod that polls SNES-type controllers and reports back over 3 wires,\nallowing for uni-directional \"read-only\" collection of user input"
 		(exclude_from_sim no)
 		(at 126.746 22.098 0)
 		(effects
@@ -12933,7 +12933,7 @@
 				(hide yes)
 			)
 		)
-		(property "Characteristics" ""
+		(property "Characteristics" "LED orange"
 			(at 53.34 68.58 0)
 			(effects
 				(font
@@ -12970,6 +12970,15 @@
 			)
 		)
 		(property "DigikeyPN" ""
+			(at 53.34 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C965800"
 			(at 53.34 68.58 0)
 			(effects
 				(font
@@ -13159,7 +13168,7 @@
 				(hide yes)
 			)
 		)
-		(property "Field11" ""
+		(property "MF" ""
 			(at 25.4 76.2 0)
 			(effects
 				(font
@@ -13168,7 +13177,7 @@
 				(hide yes)
 			)
 		)
-		(property "MF" ""
+		(property "LCSC" "C4364640"
 			(at 25.4 76.2 0)
 			(effects
 				(font
@@ -13410,13 +13419,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "SFC connector VERT"
 			(at 160.655 81.2222 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "psychogenic:snes_connector"
@@ -13438,6 +13448,60 @@
 			)
 		)
 		(property "Description" ""
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "SFC/SNES controller connector"
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Variant" ""
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_ALT" ""
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyPN" ""
+			(at 152.4 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
 			(at 152.4 86.36 0)
 			(effects
 				(font
@@ -13591,6 +13655,60 @@
 				(hide yes)
 			)
 		)
+		(property "Characteristics" "CH32V003 MCU"
+			(at 101.6 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Variant" ""
+			(at 101.6 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "CH32V003F4U6"
+			(at 101.6 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_ALT" ""
+			(at 101.6 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyPN" ""
+			(at 101.6 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C5299908"
+			(at 101.6 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "17"
 			(uuid "87631764-649a-4a24-82a2-8e4eb5496b32")
 		)
@@ -13719,7 +13837,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRT188R61H105KE13D"
+		(property "MPN" "CL10A105KB8NNNC"
 			(at 97.79 33.02 90)
 			(effects
 				(font
@@ -13744,6 +13862,24 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(property "LCSC" "C15849"
+			(at 88.9 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "0603 1uF"
+			(at 88.9 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -13780,13 +13916,14 @@
 				(justify left)
 			)
 		)
-		(property "Value" "~"
+		(property "Value" "SFC connector R/A"
 			(at 160.655 46.9322 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
 			)
 		)
 		(property "Footprint" "psychogenic:snes_connector"
@@ -13808,6 +13945,60 @@
 			)
 		)
 		(property "Description" ""
+			(at 152.4 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "SFC/SNES controller connector"
+			(at 152.4 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Variant" ""
+			(at 152.4 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at 152.4 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_ALT" ""
+			(at 152.4 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyPN" ""
+			(at 152.4 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" ""
 			(at 152.4 52.07 0)
 			(effects
 				(font
@@ -13991,7 +14182,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R_1k_0402"
+		(property "Value" "200R"
 			(at 48.26 58.42 90)
 			(effects
 				(font
@@ -14054,7 +14245,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "CRG0402F1K0"
+		(property "MPN" "RC0402FR-07200RL"
 			(at 43.18 55.88 0)
 			(effects
 				(font
@@ -14063,7 +14254,7 @@
 				(hide yes)
 			)
 		)
-		(property "DigikeyPN" "A121534CT-ND"
+		(property "DigikeyPN" ""
 			(at 49.53 60.96 90)
 			(effects
 				(font
@@ -14072,8 +14263,44 @@
 				(hide yes)
 			)
 		)
-		(property "Display Value" "1k"
+		(property "Display Value" "200R"
 			(at 51.054 60.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C114764"
+			(at 53.34 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "0402 200R"
+			(at 53.34 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Variant" ""
+			(at 53.34 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_ALT" ""
+			(at 53.34 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14261,7 +14488,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRT188R61H105KE13D"
+		(property "MPN" "CL10A105KB8NNNC"
 			(at 93.98 107.95 90)
 			(effects
 				(font
@@ -14286,6 +14513,24 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+		(property "LCSC" "C15849"
+			(at 85.09 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "0603 1uF"
+			(at 85.09 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
 			)
 		)
 		(pin "2"
@@ -14597,6 +14842,60 @@
 				(hide yes)
 			)
 		)
+		(property "Characteristics" "2x6 100mil female"
+			(at 198.12 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Variant" ""
+			(at 198.12 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at 198.12 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_ALT" ""
+			(at 198.12 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyPN" ""
+			(at 198.12 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C541855"
+			(at 198.12 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "74041c0b-f2da-4920-827d-964e8dccc8c8")
 		)
@@ -14763,7 +15062,7 @@
 				(hide yes)
 			)
 		)
-		(property "Characteristics" ""
+		(property "Characteristics" "2x3 100mil"
 			(at 38.1 35.56 0)
 			(effects
 				(font
@@ -14800,6 +15099,15 @@
 			)
 		)
 		(property "DigikeyPN" ""
+			(at 38.1 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C492420"
 			(at 38.1 35.56 0)
 			(effects
 				(font
@@ -15492,7 +15800,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM21BR6YA106KE43L"
+		(property "MPN" "CL21A106KOQNNNE"
 			(at 101.6 107.95 90)
 			(effects
 				(font
@@ -15512,6 +15820,24 @@
 		)
 		(property "Display Value" "10u/35V"
 			(at 104.14 111.506 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1713"
+			(at 92.71 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "0805 10uF"
+			(at 92.71 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15618,7 +15944,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM155R71H104KE14J"
+		(property "MPN" "CL05B104KO5NNNC"
 			(at 90.17 33.02 90)
 			(effects
 				(font
@@ -15629,6 +15955,24 @@
 		)
 		(property "DigikeyPN" "490-13342-1-ND"
 			(at 87.63 34.29 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1525"
+			(at 81.28 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "0402 100nF"
+			(at 81.28 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15735,7 +16079,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM21BR6YA106KE43L"
+		(property "MPN" "CL21A106KOQNNNE"
 			(at 176.53 69.85 90)
 			(effects
 				(font
@@ -15755,6 +16099,24 @@
 		)
 		(property "Display Value" "10u/35V"
 			(at 179.07 73.406 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1713"
+			(at 167.64 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "0805 10uF"
+			(at 167.64 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15992,7 +16354,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM21BR6YA106KE43L"
+		(property "MPN" "CL21A106KOQNNNE"
 			(at 105.41 33.02 90)
 			(effects
 				(font
@@ -16012,6 +16374,24 @@
 		)
 		(property "Display Value" "10u/35V"
 			(at 107.95 36.576 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1713"
+			(at 96.52 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "0805 10uF"
+			(at 96.52 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16250,7 +16630,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM21BR6YA106KE43L"
+		(property "MPN" "CL21A106KOQNNNE"
 			(at 176.53 31.75 90)
 			(effects
 				(font
@@ -16270,6 +16650,24 @@
 		)
 		(property "Display Value" "10u/35V"
 			(at 179.07 35.306 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1713"
+			(at 167.64 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "0805 10uF"
+			(at 167.64 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16402,6 +16800,60 @@
 			)
 		)
 		(property "Description" "Male PMOD Peripheral connector"
+			(at 198.12 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "2x6 100mil male R/A"
+			(at 198.12 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Variant" ""
+			(at 198.12 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" ""
+			(at 198.12 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN_ALT" ""
+			(at 198.12 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "DigikeyPN" ""
+			(at 198.12 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C492434"
 			(at 198.12 60.96 0)
 			(effects
 				(font
@@ -16623,7 +17075,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "ERJ-U02F1002X"
+		(property "MPN" "RC0402FR-0710KL"
 			(at 35.56 66.04 0)
 			(effects
 				(font
@@ -16687,6 +17139,15 @@
 			)
 		)
 		(property "MF" ""
+			(at 25.4 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C60490"
 			(at 25.4 63.5 0)
 			(effects
 				(font
@@ -16966,7 +17427,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "GRM155R71H104KE14J"
+		(property "MPN" "CL05B104KO5NNNC"
 			(at 46.99 71.12 90)
 			(effects
 				(font
@@ -16984,7 +17445,7 @@
 				(hide yes)
 			)
 		)
-		(property "Characteristics" ""
+		(property "Characteristics" "0402 100nF"
 			(at 38.1 76.2 0)
 			(effects
 				(font
@@ -17030,6 +17491,15 @@
 			)
 		)
 		(property "MF" ""
+			(at 38.1 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C1525"
 			(at 38.1 76.2 0)
 			(effects
 				(font
@@ -17334,7 +17804,7 @@
 				(hide yes)
 			)
 		)
-		(property "MPN" "CRG0402F1K0"
+		(property "MPN" "RC0402FR-071KL"
 			(at 34.29 60.96 0)
 			(effects
 				(font
@@ -17354,6 +17824,24 @@
 		)
 		(property "Display Value" "1k"
 			(at 29.21 68.834 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C106235"
+			(at 31.75 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Characteristics" "0402 1k"
+			(at 31.75 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
