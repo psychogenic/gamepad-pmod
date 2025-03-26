@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "a2b11e2a-ae6e-4dd7-9a7b-d8062b78a7ee")
 	(paper "User" 240 140)
 	(title_block
@@ -77,24 +77,6 @@
 					)
 				)
 				(pin power_in line
-					(at 0 -25.4 90)
-					(length 5.08)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin power_in line
 					(at 0 25.4 270)
 					(length 5.08)
 					(name "VDD"
@@ -112,199 +94,37 @@
 						)
 					)
 				)
+				(pin power_in line
+					(at 0 -25.4 90)
+					(length 5.08)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
 			)
 			(symbol "CH32V003F4U6_1_1"
 				(pin bidirectional line
-					(at 20.32 5.08 180)
+					(at -20.32 12.7 0)
 					(length 5.08)
-					(name "PD7/~{RST}"
+					(name "PA2/OSCO"
 						(effects
 							(font
 								(size 1.778 1.778)
 							)
 						)
 					)
-					(number "1"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -20.32 -5.08 0)
-					(length 5.08)
-					(name "PC3"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -20.32 -2.54 0)
-					(length 5.08)
-					(name "PC4/MCO"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -20.32 0 0)
-					(length 5.08)
-					(name "PC5/SCK"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -20.32 2.54 0)
-					(length 5.08)
-					(name "PC6/MOSI"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -20.32 5.08 0)
-					(length 5.08)
-					(name "PC7/MISO"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 20.32 -10.16 180)
-					(length 5.08)
-					(name "PD1/SWIO"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 20.32 -7.62 180)
-					(length 5.08)
-					(name "PD2/A3"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 20.32 -5.08 180)
-					(length 5.08)
-					(name "PD3/A4"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 20.32 -2.54 180)
-					(length 5.08)
-					(name "PD4/A7"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 20.32 0 180)
-					(length 5.08)
-					(name "PD5/UTX"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "19"
+					(number "3"
 						(effects
 							(font
 								(size 1.778 1.778)
@@ -331,34 +151,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 20.32 2.54 180)
+					(at -20.32 5.08 0)
 					(length 5.08)
-					(name "PD6/URX"
+					(name "PC7/MISO"
 						(effects
 							(font
 								(size 1.778 1.778)
 							)
 						)
 					)
-					(number "20"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 -25.4 90)
-					(length 5.08)
-					(name "VSS"
-						(effects
-							(font
-								(size 1.778 1.778)
-							)
-						)
-					)
-					(number "21"
+					(number "14"
 						(effects
 							(font
 								(size 1.778 1.778)
@@ -367,16 +169,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at -20.32 12.7 0)
+					(at -20.32 2.54 0)
 					(length 5.08)
-					(name "PA2/OSCO"
+					(name "PC6/MOSI"
 						(effects
 							(font
 								(size 1.778 1.778)
 							)
 						)
 					)
-					(number "3"
+					(number "13"
 						(effects
 							(font
 								(size 1.778 1.778)
@@ -385,16 +187,16 @@
 					)
 				)
 				(pin bidirectional line
-					(at 20.32 -12.7 180)
+					(at -20.32 0 0)
 					(length 5.08)
-					(name "PD0"
+					(name "PC5/SCK"
 						(effects
 							(font
 								(size 1.778 1.778)
 							)
 						)
 					)
-					(number "5"
+					(number "12"
 						(effects
 							(font
 								(size 1.778 1.778)
@@ -403,16 +205,52 @@
 					)
 				)
 				(pin bidirectional line
-					(at -20.32 -12.7 0)
+					(at -20.32 -2.54 0)
 					(length 5.08)
-					(name "PC0"
+					(name "PC4/MCO"
 						(effects
 							(font
 								(size 1.778 1.778)
 							)
 						)
 					)
-					(number "7"
+					(number "11"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -20.32 -5.08 0)
+					(length 5.08)
+					(name "PC3"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -20.32 -7.62 0)
+					(length 5.08)
+					(name "PC2/SCL"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "9"
 						(effects
 							(font
 								(size 1.778 1.778)
@@ -439,16 +277,178 @@
 					)
 				)
 				(pin bidirectional line
-					(at -20.32 -7.62 0)
+					(at -20.32 -12.7 0)
 					(length 5.08)
-					(name "PC2/SCL"
+					(name "PC0"
 						(effects
 							(font
 								(size 1.778 1.778)
 							)
 						)
 					)
-					(number "9"
+					(number "7"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -25.4 90)
+					(length 5.08)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 5.08 180)
+					(length 5.08)
+					(name "PD7/~{RST}"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 2.54 180)
+					(length 5.08)
+					(name "PD6/URX"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 0 180)
+					(length 5.08)
+					(name "PD5/UTX"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 -2.54 180)
+					(length 5.08)
+					(name "PD4/A7"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 -5.08 180)
+					(length 5.08)
+					(name "PD3/A4"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 -7.62 180)
+					(length 5.08)
+					(name "PD2/A3"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 -10.16 180)
+					(length 5.08)
+					(name "PD1/SWIO"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 20.32 -12.7 180)
+					(length 5.08)
+					(name "PD0"
+						(effects
+							(font
+								(size 1.778 1.778)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.778 1.778)
@@ -457,10 +457,13 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Connector_Generic:Conn_02x03_Odd_Even"
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -527,8 +530,19 @@
 			)
 			(symbol "Conn_02x03_Odd_Even_1_1"
 				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
+					(start -1.27 3.81)
+					(end 3.81 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -549,8 +563,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
+					(start -1.27 -2.413)
+					(end 0 -2.667)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -560,19 +574,8 @@
 					)
 				)
 				(rectangle
-					(start -1.27 3.81)
-					(end 3.81 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start 3.81 -2.413)
-					(end 2.54 -2.667)
+					(start 3.81 2.667)
+					(end 2.54 2.413)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -593,8 +596,8 @@
 					)
 				)
 				(rectangle
-					(start 3.81 2.667)
-					(end 2.54 2.413)
+					(start 3.81 -2.413)
+					(end 2.54 -2.667)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -622,24 +625,6 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 2.54 180)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
 					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_3"
@@ -650,24 +635,6 @@
 						)
 					)
 					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -694,6 +661,42 @@
 					)
 				)
 				(pin passive line
+					(at 7.62 2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
 					(at 7.62 -2.54 180)
 					(length 3.81)
 					(name "Pin_6"
@@ -712,11 +715,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:LED"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -784,10 +792,22 @@
 			(symbol "LED_0_1"
 				(polyline
 					(pts
-						(xy -1.27 -1.27) (xy -1.27 1.27)
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
 					)
 					(stroke
-						(width 0.254)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -808,7 +828,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+						(xy -1.27 -1.27) (xy -1.27 1.27)
 					)
 					(stroke
 						(width 0.254)
@@ -820,22 +840,10 @@
 				)
 				(polyline
 					(pts
-						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
 					)
 					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
-					)
-					(stroke
-						(width 0)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -881,6 +889,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Mechanical:Fiducial"
 			(exclude_from_sim yes)
@@ -960,11 +969,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Mechanical:MountingHole_Pad"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim yes)
 			(in_bom no)
 			(on_board yes)
@@ -1062,9 +1076,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "TinyTapeout:434121025816"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 1.016)
 			)
@@ -1108,7 +1125,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "WS-TASV SMT Tact Switch 6.0x3.8 mm "
+			(property "Description" "WS-TASV SMT Tact Switch 6.0x3.8 mm"
 				(at 2.54 -7.62 0)
 				(effects
 					(font
@@ -1138,17 +1155,6 @@
 				)
 			)
 			(symbol "434121025816_0_0"
-				(circle
-					(center -1.27 0)
-					(radius 0.508)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(polyline
 					(pts
 						(xy -2.54 0) (xy -1.805 0)
@@ -1173,10 +1179,9 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 1.805 0) (xy 2.54 0)
-					)
+				(circle
+					(center -1.27 0)
+					(radius 0.508)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1188,6 +1193,18 @@
 				(circle
 					(center 1.27 0)
 					(radius 0.508)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.805 0) (xy 2.54 0)
+					)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1233,6 +1250,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "TinyTapeout:PMOD_HOST_2x6"
 			(exclude_from_sim no)
@@ -1312,60 +1330,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 7.62 2.54 180)
-					(length 2.54)
-					(name "IO8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 7.62 -2.54 180)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1517,7 +1481,62 @@
 						)
 					)
 				)
+				(pin bidirectional line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "IO8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "TinyTapeout:PMOD_PERIPH_2x6"
 			(exclude_from_sim no)
@@ -1614,60 +1633,6 @@
 					)
 				)
 				(pin bidirectional line
-					(at 7.62 2.54 180)
-					(length 2.54)
-					(name "IO8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 7.62 -2.54 180)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
 					(at -7.62 7.62 0)
 					(length 2.54)
 					(name "IO2"
@@ -1811,13 +1776,72 @@
 						)
 					)
 				)
+				(pin bidirectional line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "IO8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:+3V3"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1889,7 +1913,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -1901,7 +1925,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -1932,12 +1956,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2028,9 +2057,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "psychogenic:snes_controller"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2119,16 +2151,16 @@
 					)
 				)
 				(pin input line
-					(at -2.54 5.08 0)
+					(at -2.54 10.16 0)
 					(length 2.54)
-					(name "CLK"
+					(name "DATA"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "2"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2155,16 +2187,16 @@
 					)
 				)
 				(pin input line
-					(at -2.54 10.16 0)
+					(at -2.54 5.08 0)
 					(length 2.54)
-					(name "DATA"
+					(name "CLK"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2191,9 +2223,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "psypassives:C_100n_0402_50V"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -2313,7 +2348,7 @@
 			(symbol "C_100n_0402_50V_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -2325,7 +2360,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -2374,9 +2409,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "psypassives:C_10u_0805_35V"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -2505,7 +2543,7 @@
 			(symbol "C_10u_0805_35V_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -2517,7 +2555,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -2566,9 +2604,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "psypassives:C_1u_0603_50V"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -2668,7 +2709,7 @@
 			(symbol "C_1u_0603_50V_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -2680,7 +2721,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -2729,9 +2770,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "psypassives:R_10k_0402"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -2848,18 +2892,6 @@
 			(symbol "R_10k_0402_0_1"
 				(polyline
 					(pts
-						(xy 0 -2.286) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 0 2.286) (xy 0 2.54)
 					)
 					(stroke
@@ -2872,7 +2904,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
+						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
 					)
 					(stroke
 						(width 0)
@@ -2896,7 +2928,19 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
+						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.286) (xy 0 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -2945,9 +2989,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "psypassives:R_1k_0402"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -3073,18 +3120,6 @@
 			(symbol "R_1k_0402_0_1"
 				(polyline
 					(pts
-						(xy 0 -2.286) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy 0 2.286) (xy 0 2.54)
 					)
 					(stroke
@@ -3097,7 +3132,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
+						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
 					)
 					(stroke
 						(width 0)
@@ -3121,7 +3156,19 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.286) (xy 1.016 1.905) (xy 0 1.524) (xy -1.016 1.143) (xy 0 0.762)
+						(xy 0 -0.762) (xy 1.016 -1.143) (xy 0 -1.524) (xy -1.016 -1.905) (xy 0 -2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.286) (xy 0 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -3170,7 +3217,107 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "jumper to connect PMOD\nheader to programming pin"
+		(exclude_from_sim no)
+		(at 25.654 28.194 0)
+		(effects
+			(font
+				(size 1.18 1.18)
+			)
+			(justify left)
+		)
+		(uuid "1b7c083f-5632-4dd4-9154-ac24cb78852c")
+	)
+	(text "Gamepad Pmod"
+		(exclude_from_sim no)
+		(at 126.238 16.256 0)
+		(effects
+			(font
+				(size 4 4)
+				(thickness 0.8)
+				(bold yes)
+			)
+		)
+		(uuid "487b75f5-4895-453d-b537-beb611ea5d85")
+	)
+	(text "MCU reset"
+		(exclude_from_sim no)
+		(at 27.686 65.786 0)
+		(effects
+			(font
+				(size 1.18 1.18)
+			)
+			(justify left)
+		)
+		(uuid "63248705-fea7-4448-bd12-827c0f9df5be")
+	)
+	(text "host PMOD, allows use of 5 other pins"
+		(exclude_from_sim no)
+		(at 179.324 74.168 0)
+		(effects
+			(font
+				(size 1.18 1.18)
+			)
+			(justify left)
+		)
+		(uuid "648dbf33-9612-4e80-9657-590701596005")
+	)
+	(text "SNES-compatible\ncontroller plugs"
+		(exclude_from_sim no)
+		(at 149.606 59.944 0)
+		(effects
+			(font
+				(size 1.18 1.18)
+			)
+			(justify left)
+		)
+		(uuid "6aef372c-54b2-4e36-b5c6-ce02964022b7")
+	)
+	(text "Simple Pmod that polls SNES-type controllers and reports back over 3 wires,\nallowing for uni-directional \"read-only\" collection of user input"
+		(exclude_from_sim no)
+		(at 126.746 22.098 0)
+		(effects
+			(font
+				(size 1.4 1.4)
+			)
+		)
+		(uuid "98ddb376-d7cc-4b98-a86b-7b00df52ba6d")
+	)
+	(text "MCU: polls \ncontrollers \nand reports"
+		(exclude_from_sim no)
+		(at 107.188 38.862 0)
+		(effects
+			(font
+				(size 2 2)
+			)
+			(justify left)
+		)
+		(uuid "be809888-1945-4ff3-b971-29dbcca8d744")
+	)
+	(text "UART access,\nif fw supported"
+		(exclude_from_sim no)
+		(at 42.418 41.656 0)
+		(effects
+			(font
+				(size 1.18 1.18)
+			)
+			(justify left)
+		)
+		(uuid "c3b0744b-f71c-4703-8481-25c1e4247012")
+	)
+	(text "output PMOD"
+		(exclude_from_sim no)
+		(at 193.04 46.99 0)
+		(effects
+			(font
+				(size 1.18 1.18)
+			)
+			(justify left)
+		)
+		(uuid "f4ea54b4-8190-490d-a15a-266bb916059e")
 	)
 	(junction
 		(at 101.6 34.29)
@@ -10000,107 +10147,26 @@
 			"+rM8LgEAwCMj8AJ/xE5pbaB1zuX9Xm1smKYpnyW2V9yqqsoTYW180H7fMswy2QUAPCsCL/DHyhaH"
 			"lJJ473Po1ed12qumaZJpmiTGmHdzdXXBHpQop8D2MQAAz4DAC9yActprH+saQ0op9/U652aHLUTO"
 			"3b72p0XQBQA8KwIvcGOWwu9nTgsvBdmllQYAAJ4NgRe4UZ8JuZdOC4sQcgEAEKGWDLhZnw2rhFoA"
-			"AC7jtBJwxwi7AAD8H4EXAAAAD43ACwAAgIf2D9X4bz3838hOAAAAAElFTkSuQmCC"
+			"AC7jtBJwxwi7AAD8H4EXAAAAD43ACwAAgIf2D9X4bz3838hOAAAAAElFTkSuQmCCAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
 		)
-	)
-	(text "jumper to connect PMOD\nheader to programming pin"
-		(exclude_from_sim no)
-		(at 25.654 28.194 0)
-		(effects
-			(font
-				(size 1.18 1.18)
-			)
-			(justify left)
-		)
-		(uuid "1b7c083f-5632-4dd4-9154-ac24cb78852c")
-	)
-	(text "Gamepad Pmod"
-		(exclude_from_sim no)
-		(at 126.238 16.256 0)
-		(effects
-			(font
-				(size 4 4)
-				(thickness 0.8)
-				(bold yes)
-			)
-		)
-		(uuid "487b75f5-4895-453d-b537-beb611ea5d85")
-	)
-	(text "MCU reset"
-		(exclude_from_sim no)
-		(at 27.686 65.786 0)
-		(effects
-			(font
-				(size 1.18 1.18)
-			)
-			(justify left)
-		)
-		(uuid "63248705-fea7-4448-bd12-827c0f9df5be")
-	)
-	(text "host PMOD, allows use of 5 other pins"
-		(exclude_from_sim no)
-		(at 179.324 74.168 0)
-		(effects
-			(font
-				(size 1.18 1.18)
-			)
-			(justify left)
-		)
-		(uuid "648dbf33-9612-4e80-9657-590701596005")
-	)
-	(text "SNES-compatible\ncontroller plugs"
-		(exclude_from_sim no)
-		(at 149.606 59.944 0)
-		(effects
-			(font
-				(size 1.18 1.18)
-			)
-			(justify left)
-		)
-		(uuid "6aef372c-54b2-4e36-b5c6-ce02964022b7")
-	)
-	(text "Simple Pmod that polls SNES-type controllers and reports back over 3 wires,\nallowing for uni-directional \"read-only\" collection of user input"
-		(exclude_from_sim no)
-		(at 126.746 22.098 0)
-		(effects
-			(font
-				(size 1.4 1.4)
-			)
-		)
-		(uuid "98ddb376-d7cc-4b98-a86b-7b00df52ba6d")
-	)
-	(text "MCU: polls \ncontrollers \nand reports"
-		(exclude_from_sim no)
-		(at 107.188 38.862 0)
-		(effects
-			(font
-				(size 2 2)
-			)
-			(justify left)
-		)
-		(uuid "be809888-1945-4ff3-b971-29dbcca8d744")
-	)
-	(text "UART access,\nif fw supported"
-		(exclude_from_sim no)
-		(at 42.418 41.656 0)
-		(effects
-			(font
-				(size 1.18 1.18)
-			)
-			(justify left)
-		)
-		(uuid "c3b0744b-f71c-4703-8481-25c1e4247012")
-	)
-	(text "output PMOD"
-		(exclude_from_sim no)
-		(at 193.04 46.99 0)
-		(effects
-			(font
-				(size 1.18 1.18)
-			)
-			(justify left)
-		)
-		(uuid "f4ea54b4-8190-490d-a15a-266bb916059e")
 	)
 	(label "PMOD1"
 		(at 181.61 50.8 0)
@@ -15686,4 +15752,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )
