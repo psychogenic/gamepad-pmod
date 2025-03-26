@@ -42,6 +42,12 @@ More information and basic samples are in the [verilog directory](verilog/).
 A nice example of an implementation using this module is Uri's [2048 game](https://github.com/urish/tt10-2048-game).
 
 
+## Reading the gamepad from micropython
+
+Though it is designed for use with FPGA/ASIC projects, the reports from controller(s) may also be read on an RP2040 (e.g. the [Tiny Tapeout demoboard](https://github.com/tinyTapeout/tt-demo-pcb)) using code like the sample in [gamepad_reader.py](micropython/gamepad_reader.py).
+
+
+
 ## Hardware
 
 This code all runs on a simple PMOD that's little more than a CH32V003 and headers to connect to the controllers and PMOD.
@@ -183,3 +189,15 @@ make
 
 That should be it.
 
+
+## Updating firmware
+
+The CH32V firmware may be updated using a suitable programmer.  However, to assist the production run and to make future updates easy I updated the pico_ch32v003_prog to use less memory and burn firmware.
+
+The fork and a sample using it is available on [gamepad-update](https://github.com/psychogenic/gamepad-update/tree/main/src).
+
+Adding a jumper between the two top pins on the 6-pin header, between PRJ and SWIO:
+
+![programming header](images/gpprogjump.png)
+
+will connect PMOD IO4 to the programming pin and allow the RP2040 on the demoboard to write new firmware.
