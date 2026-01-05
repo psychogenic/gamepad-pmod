@@ -70,6 +70,11 @@ bool ControllerSet::poll() {
 		Delay_Us(CONTROLLER_CLOCK_PERIOD_US/2);
 	}
 
+	// One more clock - this is required by some controller clones
+	funDigitalWrite(clock, FUN_HIGH);
+	Delay_Us(CONTROLLER_CLOCK_PERIOD_US/2);
+	funDigitalWrite(clock, FUN_LOW);
+
 	bool haveChanges = false;
 	for (uint8_t ctrl=0; ctrl<CONTROLLERSET_NUM_CONTROLLERS; ctrl++) {
 		if (controllers[ctrl].setStatus(polled_statii[ctrl])) {
