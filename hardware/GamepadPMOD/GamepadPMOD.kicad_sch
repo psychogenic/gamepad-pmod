@@ -10963,7 +10963,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.kingbrightusa.com/images/catalog/SPEC/APT1608SURCK.pdf"
 			(at 53.34 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -10974,7 +10974,7 @@
 				)
 			)
 		)
-		(property "Description" "Light emitting diode"
+		(property "Description" "Kingbright red LED, 630 nm, 0603 (1608 metric), clear lens"
 			(at 53.34 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -10985,7 +10985,7 @@
 				)
 			)
 		)
-		(property "Characteristics" "LED orange"
+		(property "Characteristics" "Red 630nm, 1.95V typical at 20mA, cathode pad 1"
 			(at 53.34 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -11007,7 +11007,7 @@
 				)
 			)
 		)
-		(property "MPN" ""
+		(property "MPN" "APT1608SURCK"
 			(at 53.34 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -11029,7 +11029,7 @@
 				)
 			)
 		)
-		(property "DigikeyPN" ""
+		(property "DigikeyPN" "754-1123-1-ND"
 			(at 53.34 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -11040,7 +11040,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C965800"
+		(property "LCSC" ""
 			(at 53.34 68.58 0)
 			(hide yes)
 			(show_name no)
