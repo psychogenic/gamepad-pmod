@@ -20,6 +20,18 @@ if ($LASTEXITCODE -ne 0) {
     throw "FreeCAD generation failed with exit code $LASTEXITCODE"
 }
 
+$PopulatedStep = Join-Path $env:TEMP 'GamepadPMOD_populated.step'
+& $KiCadCli pcb export step --force --include-pads --include-soldermask `
+    --include-silkscreen -o $PopulatedStep $Board
+if ($LASTEXITCODE -ne 0) {
+    throw "KiCad populated STEP export failed with exit code $LASTEXITCODE"
+}
+
+& $FreeCADCmd (Join-Path $MechanicalDir 'verify_assembly.py')
+if ($LASTEXITCODE -ne 0) {
+    throw "Mechanical placement verification failed with exit code $LASTEXITCODE"
+}
+
 & $KiCadCli pcb render `
     --output (Join-Path $MechanicalDir 'GamepadPMOD_dual_connector_assembly.png') `
     --width 1920 --height 1080 --side top --background opaque `

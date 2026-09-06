@@ -69,3 +69,13 @@ the same placements used by fabrication:
 ```powershell
 .\render_assembly.ps1
 ```
+
+The script exports the fully populated KiCad STEP and verifies that the STEP
+pin centres exactly match all 14 PCB drills:
+
+| Connector | Pin-centre X | Pin-centre Y |
+|-----------|-------------:|--------------|
+| J1 | 22.50 mm | 61.37, 65.37, 69.37, 73.37, 79.87, 83.87, 87.87 mm |
+| J2 | 39.00 mm | 61.37, 65.37, 69.37, 73.37, 79.87, 83.87, 87.87 mm |
+
+It also rejects filler-to-PCB or filler-to-connector intersections.
