@@ -21,7 +21,6 @@ OUTER_RADIUS = 6.15
 PEDESTAL_X_MIN = -15.985
 PEDESTAL_RADIUS = 2.76
 PROFILE_SPLIT_X = -0.10
-BRIDGE_DEPTH = 1.00
 
 # Elecrow assembly branch placement.
 PCB_TOP_Z = 1.60
@@ -110,10 +109,10 @@ def consolidated_half(local_half, near_split_x, far_split_x):
 def make_filler():
     left, right = split_ring()
     left_half = consolidated_half(
-        left, PROFILE_SPLIT_X - BRIDGE_DEPTH, PROFILE_SPLIT_X
+        left, OUTER_X_MIN + FIT_CLEARANCE_XY, PROFILE_SPLIT_X
     )
     right_half = consolidated_half(
-        right, PROFILE_SPLIT_X, PROFILE_SPLIT_X + BRIDGE_DEPTH
+        right, PROFILE_SPLIT_X, OUTER_ARC_CENTRE_X
     )
     return left_half, right_half
 
@@ -122,14 +121,14 @@ def make_kicad_filler():
     left, right = split_ring()
     pitch = J2_X - J1_X
     halves = []
-    for half, x_min in (
-        (left, PROFILE_SPLIT_X - BRIDGE_DEPTH),
-        (right, PROFILE_SPLIT_X),
+    for half, x_min, x_max in (
+        (left, OUTER_X_MIN + FIT_CLEARANCE_XY, PROFILE_SPLIT_X),
+        (right, PROFILE_SPLIT_X, OUTER_ARC_CENTRE_X),
     ):
         second = half.copy()
         second.translate(App.Vector(0, pitch, 0))
         bridge = Part.makeBox(
-            BRIDGE_DEPTH,
+            x_max - x_min,
             pitch - 2 * (OUTER_RADIUS - FIT_CLEARANCE_XY),
             GAP_HEIGHT - FIT_CLEARANCE_Z,
             App.Vector(
@@ -152,7 +151,10 @@ def add_parameters(document):
         ("Connector centre spacing", J2_X - J1_X),
         ("PCB top Z", PCB_TOP_Z),
         ("Connector model Z offset", MODEL_Z_OFFSET),
-        ("Bridge depth", BRIDGE_DEPTH),
+        (
+            "Full straight bridge length",
+            OUTER_ARC_CENTRE_X - OUTER_X_MIN - FIT_CLEARANCE_XY,
+        ),
     )
     sheet.set("A1", "Parameter")
     sheet.set("B1", "Value")

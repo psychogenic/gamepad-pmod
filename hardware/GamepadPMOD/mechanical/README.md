@@ -29,9 +29,11 @@ Each connector's central semistadium-shaped pedestal reaches the PCB, leaving
 a 3.20 mm-high ring-shaped cavity under the wider housing. The filler reproduces
 the STEP model's exact outer and pedestal profiles with 0.15 mm horizontal
 clearance. Matching halves for J1 and J2 are joined across the 4.50 mm space
-between their housings. The result is split along the connector pin-row
-direction into front and rear consolidated pieces, so both can slide into place
-after soldering.
+between their housings by a bridge spanning the complete **32.25 mm straight
+section** of the support profile. The result is split along the connector
+pin-row direction into front and rear consolidated pieces. The two bridge
+sections meet at the split without overlap, retaining post-assembly
+installation while giving each half the widest possible load path.
 
 Print flat without supports. Insert one half from each long side of the
 connector until its inner profile seats around the central pedestal. A small
