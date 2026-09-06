@@ -15529,6 +15529,28 @@
 			(pintype "power_in")
 			(uuid "f3c288e8-c026-4807-8435-d0f07b787d43")
 		)
+		(model "${KIPRJMOD}/mechanical/SNES_Connector_Straight_Master_Assy.stp"
+			(offset
+				(xyz 13.615 0 14.6)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+		(model "${KIPRJMOD}/mechanical/dual_snes_connector_gap_filler_kicad.step"
+			(offset
+				(xyz 13.615 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 		(embedded_fonts no)
 	)
 	(footprint "flyingcarsfootprints:StitchingVia-0.4mmDrill"
@@ -18298,6 +18320,17 @@
 			(pinfunction "GND")
 			(pintype "power_in")
 			(uuid "c2021703-8329-4430-9ade-ed5738b18a48")
+		)
+		(model "${KIPRJMOD}/mechanical/SNES_Connector_Straight_Master_Assy.stp"
+			(offset
+				(xyz 13.615 0 14.6)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
 		)
 		(embedded_fonts no)
 	)
