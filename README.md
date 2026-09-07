@@ -201,3 +201,13 @@ Adding a jumper between the two top pins on the 6-pin header, between PRJ and SW
 ![programming header](images/gpprogjump.png)
 
 will connect PMOD IO4 to the programming pin and allow the RP2040 on the demoboard to write new firmware.
+
+
+## Assembly
+
+These controller connectors aren't actually meant to be used this way.  In order to provide a bit of stability, we 3D print little feet:
+
+![stabilizer foot](images/connectorstab3dprint.png)
+
+The STL file for this is [hardware/gamepad-footstabv1p0-tol2.stl](./hardware/gamepad-footstabv1p0-tol2.stl)
+ 
